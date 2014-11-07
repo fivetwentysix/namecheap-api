@@ -22,23 +22,27 @@ Or install it yourself as:
 
 In Gemfile:
 
-    gem 'namecheap-api'
+```ruby
+gem 'namecheap-api'
+```
 
 Example:
 
-    require 'namecheap-api'
+```ruby
+require 'namecheap-api'
 
-    config = {
-      sandbox: true,
-      client_ip: 'xxx.xxx.xxx.xxx',
-      api_username: '<insert username>',
-      username: '<insert password>',
-      api_key: '<insert api key>'
-    }
+config = {
+  sandbox: true,
+  client_ip: 'xxx.xxx.xxx.xxx',
+  api_username: '<insert username>',
+  username: '<insert password>',
+  api_key: '<insert api key>'
+}
 
-    client = NamecheapApi::Client.new(config)
+client = NamecheapApi::Client.new(config)
 
-    client.call('namecheap.domains.check', :DomainList => 'domain1.com,domain2.com')
+client.call('namecheap.domains.check', :DomainList => 'domain1.com,domain2.com')
+```
 
 ## Contributing
 
