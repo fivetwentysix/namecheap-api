@@ -1,6 +1,6 @@
-# Namecheap
+# NamecheapApi
 
-TODO: Write a gem description
+a Ruby gem for working with the Namecheap API.
 
 ## Installation
 
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install namecheap
+    $ gem install namecheap-api --pre
 
 ## Usage
 

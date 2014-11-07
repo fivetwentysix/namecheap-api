@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'namecheap_api/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "namecheap_api"
+  spec.name          = "namecheap-api"
   spec.version       = NamecheapApi::VERSION
   spec.authors       = ["Patrick Ma"]
   spec.email         = ["fivetwentysix@gmail.com"]
