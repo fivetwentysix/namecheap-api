@@ -1,3 +1,3 @@
 module NamecheapApi
-  VERSION = "0.1.0pre"
+  VERSION = "0.0.1"
 end
