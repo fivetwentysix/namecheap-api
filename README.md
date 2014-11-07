@@ -23,7 +23,7 @@ Or install it yourself as:
 Example:
 
 ```ruby
-require 'namecheap-api'
+require 'namecheap_api'
 
 config = {
   sandbox: true,
