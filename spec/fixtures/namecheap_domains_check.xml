@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApiResponse Status="OK" xmlns="http://api.namecheap.com/xml.response">
+  <Errors />
+  <Warnings />
+  <RequestedCommand>namecheap.domains.check</RequestedCommand>
+  <CommandResponse Type="namecheap.domains.check">
+    <DomainCheckResult Domain="domain1.com" Available="false" ErrorNo="0" Description="" />
+    <DomainCheckResult Domain="domain2.com" Available="false" ErrorNo="0" Description="" />
+  </CommandResponse>
+  <Server>WEB1-SANDBOX1</Server>
+  <GMTTimeDifference>--5:00</GMTTimeDifference>
+  <ExecutionTime>1.21</ExecutionTime>
+</ApiResponse>

@@ -14,6 +14,17 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'pry'
+
+def fixtures_path
+  File.dirname(__FILE__) + '/fixtures'
+end
+
+def load_fixture(name, extension = '.xml')
+  path = fixtures_path + '/' + name + extension
+  File.open(path).read
+end
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
