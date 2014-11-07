@@ -26,6 +26,15 @@ describe NamecheapApi::Response do
       ]
       expect(response.results).to eq(expectation)
     end
+
+    it 'supports namecheap.domains.getList response' do
+      response.raw_body = load_fixture('namecheap_domains_get_list')
+      expectation = [
+        { id: "13165130", name: "domain1.com", user: "example", created: "05/29/2014", expires: "05/29/2015", is_expired: "false", is_locked: "false", auto_renew: "false", whois_guard: "NOTPRESENT" },
+        { id: "13166063", name: "domain2.com", user: "example", created: "05/29/2014", expires: "05/29/2015", is_expired: "false", is_locked: "false", auto_renew: "false", whois_guard: "ENABLED" }
+      ]
+      expect(response.results).to eq(expectation)
+    end
   end
 
   describe '#doc' do

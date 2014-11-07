@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'active_support/core_ext'
 
 module NamecheapApi
   class Response
@@ -13,9 +14,13 @@ module NamecheapApi
     end
 
     def results
-      doc.css('CommandResponse > *').map do |result|
+      result_elements.map do |result|
         clean_hash_keys(result.to_h)
       end
+    end
+
+    def result_elements
+      doc.css(result_finder)
     end
 
     def doc
@@ -24,13 +29,18 @@ module NamecheapApi
 
     private
 
+    def result_finder
+      case command
+      when 'namecheap.domains.getList'
+        'DomainGetListResult > Domain'
+      else
+        'CommandResponse > *'
+      end
+    end
+
     def clean_hash_keys(hash)
       hash.map do |key, value|
-        clean_key = key
-          .gsub(/(?:([A-Za-z\d])|^)()(?=\b|[^a-z])/) { "#{$1}#{$1 && '_'}#{$2.downcase}" }
-          .chop
-          .downcase.to_sym
-        { clean_key => value }
+        { key.underscore.to_sym => value }
       end.inject(:merge)
     end
   end
