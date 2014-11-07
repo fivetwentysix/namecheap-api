@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install namecheap-api --pre
+    $ gem install namecheap-api
 
 ## Usage
 
