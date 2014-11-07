@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["fivetwentysix@gmail.com"]
   spec.summary       = "a Gem for interacting with the Namecheap API"
   # spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/PatrickMa/namecheap-api"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
