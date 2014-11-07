@@ -20,12 +20,6 @@ Or install it yourself as:
 
 ## Usage
 
-In Gemfile:
-
-```ruby
-gem 'namecheap-api'
-```
-
 Example:
 
 ```ruby
