@@ -3,7 +3,6 @@ require 'namecheap_api/response'
 describe NamecheapApi::Response do
   # See: spec/fixtures/namecheap_domains_check.xml
   let(:body) { load_fixture('namecheap_domains_check') }
-
   let(:response) { NamecheapApi::Response.new(body) }
 
   describe '#initialize(body)' do
