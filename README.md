@@ -34,8 +34,18 @@ config = {
 }
 
 client = NamecheapApi::Client.new(config)
+response = client.call('namecheap.domains.check', :DomainList => 'domain1.com,domain2.com')
+```
 
-client.call('namecheap.domains.check', :DomainList => 'domain1.com,domain2.com')
+You can call on NamecheapApi::Response#results to get your results.
+
+`response.results` returns:
+
+```ruby
+[
+  {:domain=>"domain1.com", :available=>"true", :error_no=>"0", :description=>""},
+  {:domain=>"domain2.com", :available=>"false", :error_no=>"0", :description=>""}
+]
 ```
 
 ## Contributing
