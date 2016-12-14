@@ -6,11 +6,11 @@ require 'namecheap_api/version'
 Gem::Specification.new do |spec|
   spec.name          = "namecheap-api"
   spec.version       = NamecheapApi::VERSION
-  spec.authors       = ["Patrick Ma"]
-  spec.email         = ["fivetwentysix@gmail.com"]
+  spec.authors       = ["Patrick Ma", "Marc Wickenden"]
+  spec.email         = ["code@4armed.com"]
   spec.summary       = "a Gem for interacting with the Namecheap API"
   # spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = "https://github.com/PatrickMa/namecheap-api"
+  spec.homepage      = "https://github.com/4ARMED/namecheap-api"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -25,5 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "simplecov"
   spec.add_dependency "typhoeus", "~> 0.6"
   spec.add_dependency "nokogiri", "~> 1.6"
-  spec.add_dependency "activesupport", "~> 4.1"
+  spec.add_dependency "activesupport", "~> 4.2"
 end
