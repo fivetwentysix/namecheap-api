@@ -1,5 +1,7 @@
 require 'nokogiri'
+require 'active_support'
 require 'active_support/core_ext'
+require 'active_support/core_ext/hash/conversions'
 
 module NamecheapApi
   class Response
