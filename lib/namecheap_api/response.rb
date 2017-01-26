@@ -35,6 +35,8 @@ module NamecheapApi
       case command
       when 'namecheap.domains.getList'
         'DomainGetListResult > Domain'
+      when /namecheap\.domains\.dns\.get(h|H)osts/
+        'DomainDNSGetHostsResult > host'
       else
         'CommandResponse > *'
       end
