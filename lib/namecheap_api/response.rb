@@ -33,7 +33,7 @@ module NamecheapApi
 
     def result_finder
       case command
-      when 'namecheap.domains.getList'
+      when /namecheap\.domains\.get(l|L)ist/
         'DomainGetListResult > Domain'
       else
         'CommandResponse > *'
