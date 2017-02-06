@@ -12,8 +12,8 @@ module NamecheapApi
       @sandbox = config[:sandbox]
     end
 
-    def call(command, parameters = {})
-      Response.new(new_request(command, parameters).call.body)
+    def call(command, method, parameters = {})
+      Response.new(new_request(command, method, parameters).call.body)
     end
 
     def endpoint
@@ -22,8 +22,8 @@ module NamecheapApi
 
     private
 
-    def new_request(command, parameters)
-      Request.new(self, command, parameters)
+    def new_request(command, method, parameters)
+      Request.new(self, command, method, parameters)
     end
   end
 end

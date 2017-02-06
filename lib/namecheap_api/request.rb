@@ -2,18 +2,21 @@ require 'typhoeus'
 
 module NamecheapApi
   class Request
-    def initialize(client, command, command_parameters = {})
+    def initialize(client, command, method, command_parameters = {})
       @client = client
       @command = command
+      @method = method
       @command_parameters = command_parameters
     end
 
     def call
       request.run
     end
-    
+
     def request
-      request = Typhoeus::Request.new(@client.endpoint, params: request_parameters)
+      Typhoeus::Request.new(@client.endpoint,
+                            method: @method,
+                            params: request_parameters)
     end
 
     def request_parameters
